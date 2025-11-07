@@ -1,8 +1,8 @@
 package book
 
 type Book struct {
-	ID     int
+	ID     int `gorm:"primary_key"`
 	Title  string
 	Author string
-	ISBN   string
+	ISBN   string `gorm:"unique"`
 }
