@@ -11,10 +11,7 @@ import (
 func Init(dbConn *gorm.DB) *https.BookHandler {
 	logger, _ := zap.NewProduction()
 	defer func(logger *zap.Logger) {
-		err := logger.Sync()
-		if err != nil {
-			panic(err)
-		}
+		_ = logger.Sync()
 	}(logger)
 	bookRepository := db.NewBookRepository(dbConn)
 	bookService := book.NewBookService(bookRepository, logger)
