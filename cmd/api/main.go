@@ -1,7 +1,7 @@
 package main
 
 import (
-	"books-api/internal/adapters/http"
+	"books-api/internal/adapters/https"
 	"books-api/internal/app"
 	"books-api/internal/core/book"
 	"fmt"
@@ -35,7 +35,7 @@ func main() {
 
 	bookHandler := app.Init(dbConn)
 	r := gin.Default()
-	http.InitRoutes(r, bookHandler)
+	https.InitRoutes(r, bookHandler)
 	if err := r.Run(":8080"); err != nil {
 		panic(fmt.Errorf("failed to start server: %v", err))
 	}
