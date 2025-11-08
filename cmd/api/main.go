@@ -27,10 +27,10 @@ func main() {
 
 	dbConn, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic(fmt.Errorf("Failed to connect db %v", err))
+		panic(fmt.Errorf("failed to connect db %v", err))
 	}
 	if err := dbConn.AutoMigrate(&book.Book{}); err != nil {
-		panic(fmt.Errorf("Failed to migrate db: %v", err))
+		panic(fmt.Errorf("failed to migrate db: %v", err))
 	}
 
 	bookHandler := app.Init(dbConn)
