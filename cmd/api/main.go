@@ -17,7 +17,7 @@ func main() {
 		fmt.Println("No .env file found")
 		panic(err)
 	}
-	host := os.Getenv("DB_HOST")
+	host := os.Getenv("DB_HOST") // FIX: get the values from AWS Secrets Manager with SDK
 	port := os.Getenv("DB_PORT")
 	usr := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
