@@ -1,5 +1,5 @@
 ![Go Version](https://img.shields.io/badge/Go-1.24-00ADD8?logo=go&logoColor=white)
-[![Test & Build](https://github.com/gpaolettig/books-api/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/gpaolettig/books-api/actions/workflows/ci.yml)
+[![Test & Build](https://github.com/gpaolettig/books-api/actions/workflows/cicd.yml/badge.svg?branch=develop)](https://github.com/gpaolettig/books-api/actions/workflows/cicd.yml)
 # Books API
 This is a simple RESTful API of books built using Go. allows you to perform two actions (get book by ID and get all books).  
 This project have a CI/CD pipeline using Gh Actions to automate testing and deployment to AWS EC2 instance.
