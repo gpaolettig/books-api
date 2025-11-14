@@ -6,6 +6,12 @@ on:
       - 'README.md'
       - 'docs/**'
       - '.github/**'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '.github/**'
 
 jobs:
   build_and_test:
