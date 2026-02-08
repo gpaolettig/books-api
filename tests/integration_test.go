@@ -60,6 +60,7 @@ func TestHealthcheckGetBookAndGetAllBooks(t *testing.T) {
 
 }
 func setup() *gin.Engine {
+
 	dbConn, _ := gorm.Open(sqlite.Open(":memory:"), &gorm.Config{})
 	if err := dbConn.AutoMigrate(&book.Book{}); err != nil {
 		panic(fmt.Errorf("Failed to migrate db: %v", err))
